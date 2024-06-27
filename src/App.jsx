@@ -1,17 +1,30 @@
+import {  Routes, Route } from 'react-router-dom';
+import EditTodo from './components/EditTodo';
 import './App.css'
-import AddTodo from './components/AddTodo'
-import Todos from './components/Todos'
+import Main from './components/Main';
 
-function App() {
 
+const App = () => {
   return (
-    <>
-      <h3>Learning about redux toolkit</h3>  
-      <AddTodo />
-      <Todos />
-      
-    </>
-  )
-}
+   
+      <Routes>
+        {/* <Route path="/" element={<AddTodo />} /> */}
+        {/* <Route path="/" element={<AddTodo />} /> */}
+        <Route path="/" element={<Main />} />
+        <Route path="/edit/:id" element={<EditTodo />} />
+      </Routes>
+    
+  );
+};
 
-export default App
+export default App;
+
+
+
+
+
+
+
+
+
+
